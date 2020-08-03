@@ -120,7 +120,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Attributes\FromJson.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,8 +132,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\coderunner.css" />
-    <Content Include="Content\webmail.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -189,6 +186,12 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDCore\PDWebCore\PDWebCore.csproj">
+      <Project>{62a21e22-54e7-40f9-9efc-472efa7bf66d}</Project>
+      <Name>PDWebCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -223,6 +226,16 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(ProjectDir)Scripts\PDWebCore" mkdir "$(ProjectDir)Scripts\PDWebCore"
+if not exist "$(ProjectDir)Content\PDWebCore" mkdir "$(ProjectDir)Content\PDWebCore"
+if not exist "$(ProjectDir)ckeditor" mkdir "$(ProjectDir)ckeditor"
+
+xcopy "$(SolutionDir)\PDCore\PDWebCore\Scripts" "$(ProjectDir)Scripts\PDWebCore" /E /Y /D /r
+xcopy "$(SolutionDir)\PDCore\PDWebCore\Content" "$(ProjectDir)Content\PDWebCore" /E /Y /D /r
+xcopy "$(SolutionDir)\PDCore\PDWebCore\ckeditor" "$(ProjectDir)ckeditor" /E /Y /D /r
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

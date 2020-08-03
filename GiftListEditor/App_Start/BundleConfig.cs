@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace GiftListEditor
 {
@@ -25,8 +24,8 @@ namespace GiftListEditor
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/coderunner.css",
-                      "~/Content/webmail.css"));
+                      "~/Content/PDWebCore/coderunner.css",
+                      "~/Content/PDWebCore/webmail.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js",
