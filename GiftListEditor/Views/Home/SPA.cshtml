@@ -48,24 +48,34 @@
             self.goToFolder = function (folder) { location.hash = folder };
             self.goToMail = function (mail) { location.hash = mail.folder + '/' + mail.id };
 
+            GoToFolder(self.folders[0]);
+
             // Client-side routes
             Sammy(function () {
                 this.get('#:folder', function () {
-                    self.chosenFolderId(this.params.folder);
+                    let folder = this.params.folder;
+
+                    if (!self.folders.includes(folder)) {
+                        GoToFolder(self.folders[0]);
+                        
+                        return;
+                    }
+
+                    self.chosenFolderId(folder);
                     self.chosenMailData(null);
-                    $.get("http://learn.knockoutjs.com//mail", { folder: this.params.folder }, self.chosenFolderData);
+                    $.get("/mail", { folder: folder }, self.chosenFolderData);
                 });
 
                 this.get('#:folder/:mailId', function () {
                     self.chosenFolderId(this.params.folder);
                     self.chosenFolderData(null);
-                    $.get("http://learn.knockoutjs.com//mail", { mailId: this.params.mailId }, self.chosenMailData);
+                    $.get("/mail", { mailId: this.params.mailId }, self.chosenMailData);
                 });
 
-                this.get('', function () { this.app.runRoute('get', '#Inbox') });
+                //this.get('', function () { this.app.runRoute('get', '#Inbox') });
             }).run();
         };
-
+        
         ko.applyBindings(new WebmailViewModel());
     </script>
 }
