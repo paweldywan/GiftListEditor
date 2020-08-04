@@ -27,8 +27,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 ckeditor/
-/GiftListEditor/Content/PDWebCore/
-/GiftListEditor/Scripts/PDWebCore/
+**/Content/PDWebCore/
+**/Scripts/PDWebCore/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
