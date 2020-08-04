@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftListEditor", "GiftListEditor\GiftListEditor.csproj", "{8C642558-37DA-4D76-AB7B-25EC35D48ED4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftListEditor.Web", "GiftListEditor\GiftListEditor.Web.csproj", "{8C642558-37DA-4D76-AB7B-25EC35D48ED4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{A136B627-4EF6-4246-B49E-45AFF334045F}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDCoreNew", "PDCore\PDCoreNew\PDCoreNew.csproj", "{81F5C1D9-664B-4300-98E6-99AEDA748C2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDWebCore", "PDCore\PDWebCore\PDWebCore.csproj", "{62A21E22-54E7-40F9-9EFC-472EFA7BF66D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftListEditor.BLL", "GiftListEditor.BLL\GiftListEditor.BLL.csproj", "{FBBCF9F0-D98D-4EE0-B20A-73211736208D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftListEditor.DAL", "GiftListEditor.DAL\GiftListEditor.DAL.csproj", "{D118F2AC-58F4-4F59-9852-D7C78AB99919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,22 @@ Global
 		{62A21E22-54E7-40F9-9EFC-472EFA7BF66D}.Test|Any CPU.Build.0 = Release|Any CPU
 		{62A21E22-54E7-40F9-9EFC-472EFA7BF66D}.Test2|Any CPU.ActiveCfg = Release|Any CPU
 		{62A21E22-54E7-40F9-9EFC-472EFA7BF66D}.Test2|Any CPU.Build.0 = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Test|Any CPU.Build.0 = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Test2|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBCF9F0-D98D-4EE0-B20A-73211736208D}.Test2|Any CPU.Build.0 = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Test|Any CPU.Build.0 = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Test2|Any CPU.ActiveCfg = Release|Any CPU
+		{D118F2AC-58F4-4F59-9852-D7C78AB99919}.Test2|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
