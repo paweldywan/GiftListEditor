@@ -8,7 +8,7 @@ namespace GiftListEditor.BLL.Enums
 {
     public enum Folder
     {
-        Inbox,
+        Inbox = 1,
         Archive,
         Sent,
         Spam

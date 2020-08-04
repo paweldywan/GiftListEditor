@@ -1,5 +1,6 @@
 ﻿using GiftListEditor.BLL.Enums;
 using Newtonsoft.Json;
+using PDCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,12 +12,11 @@ using System.Threading.Tasks;
 namespace GiftListEditor.BLL.Models
 {
     [Table("Mail", Schema = "dbo")]
-    public class Mail
+    public class Mail : IModificationHistory
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Id")]
-        [Range(1, int.MaxValue)]
         public int Id { get; set; }
 
         [Required]
@@ -52,5 +52,15 @@ namespace GiftListEditor.BLL.Models
         [DataType(DataType.Html)]
         [MaxLength(2500)]
         public string MessageContent { get; set; }
+
+
+        public DateTime DateModified { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
+
+        public bool IsDirty { get; set; }
     }
 }

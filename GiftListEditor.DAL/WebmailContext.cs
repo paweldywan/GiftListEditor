@@ -11,8 +11,9 @@ namespace GiftListEditor.DAL
 {
     public class WebmailContext : MainDbContext
     {
-        public WebmailContext(string nameOrConnectionString) : base(nameOrConnectionString)
+        public WebmailContext() : base("WebmailContext")
         {
+            Database.SetInitializer(new WebmailDbInitializer());
         }
 
         public DbSet<Mail> Mails { get; set; }

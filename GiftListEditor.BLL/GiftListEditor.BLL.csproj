@@ -52,5 +52,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDCore\PDCore\PDCore.csproj">
+      <Project>{5AC8CB92-D1B0-4F43-A444-E8D5E747DB4D}</Project>
+      <Name>PDCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

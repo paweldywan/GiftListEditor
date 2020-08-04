@@ -1,6 +1,14 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using GiftListEditor.DAL;
+using PDCore.Factories.Fac;
+using PDCore.Factories.IFac;
+using PDCore.Interfaces;
+using PDCore.Repositories.IRepo;
+using PDCoreNew.Context.IContext;
+using PDCoreNew.Loggers;
+using PDCoreNew.Repositories.Repo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,16 +28,21 @@ namespace GiftListEditor
 
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
 
-            //builder.RegisterType<InMemoryRestaurantData>()
-            //       .As<IRestaurantData>()
-            //       .SingleInstance();
+            builder.RegisterType(typeof(SqlRepositoryEntityFrameworkAsync<>))
+                   .As(typeof(ISqlRepositoryEntityFrameworkDisconnected<>))
+                   .InstancePerRequest();
 
+            builder.RegisterType<WebmailContext>()
+                   .As<IEntityFrameworkDbContext>();
 
-            //builder.RegisterType<SqlRestaurantData>()
-            //       .As<IRestaurantData>()
-            //       .InstancePerRequest();
+            builder.RegisterType<WebmailContext>()
+                   .As<IMainDbContext>();
 
-            //builder.RegisterType<OdeToFoodDbContext>();
+            builder.RegisterType<TraceLogger>()
+                   .As<ILogger>();
+
+            builder.RegisterType<LogMessageFactory>()
+                   .As<ILogMessageFactory>();
 
             var container = builder.Build();
 
