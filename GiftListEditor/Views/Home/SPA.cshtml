@@ -63,19 +63,31 @@
 
                     self.chosenFolderId(folder);
                     self.chosenMailData(null);
-                    $.get("/mail", { folder: folder }, self.chosenFolderData);
+                    $.get("/api/mail", { folder: folder },
+                    function (data) {
+                        $.each(data.mails, function () {
+                            this.date = new Date(this.date).toLocaleDateString();
+                        });
+
+                        self.chosenFolderData(data)
+                    });
                 });
 
                 this.get('#:folder/:mailId', function () {
                     self.chosenFolderId(this.params.folder);
                     self.chosenFolderData(null);
-                    $.get("/mail", { mailId: this.params.mailId }, self.chosenMailData);
+                    $.get("/api/mail", { mailId: this.params.mailId },
+                    function (data) {
+                        data.date = new Date(data.date).toLocaleDateString();
+
+                        self.chosenMailData(data)
+                    });
                 });
 
                 //this.get('', function () { this.app.runRoute('get', '#Inbox') });
             }).run();
         };
         
-        ko.applyBindings(new WebmailViewModel());
+        ko.applyBindings(new WebmailViewModel(), document.body);
     </script>
 }

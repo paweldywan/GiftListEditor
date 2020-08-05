@@ -1,10 +1,13 @@
 ﻿using GiftListEditor.BLL.Enums;
 using GiftListEditor.BLL.Models;
+using GiftListEditor.DAL.DTO;
+using GiftListEditor.DAL.Repositories;
 using PDCore.Repositories.IRepo;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -13,9 +16,9 @@ namespace GiftListEditor.Api
 {
     public class MailController : ApiController
     {
-        private readonly ISqlRepositoryEntityFrameworkDisconnected<Mail> mailRepository;
+        private readonly IMailRepository mailRepository;
 
-        public MailController(ISqlRepositoryEntityFrameworkDisconnected<Mail> mailRepository)
+        public MailController(IMailRepository mailRepository)
         {
             this.mailRepository = mailRepository;
         }
@@ -33,17 +36,17 @@ namespace GiftListEditor.Api
             return Ok(mail);
         }
 
-        [ResponseType(typeof(Mail))]
+        [ResponseType(typeof(MailDtos))]
         public async Task<IHttpActionResult> Get(Folder folder)
         {
-            var mail = await mailRepository.Find(m => m.Folder == folder).FirstOrDefaultAsync();
+            MailDtos mails = await mailRepository.GetDtoAsync(m => m.Folder == folder);
 
-            if (mail == null)
+            if (mails == null)
             {
                 return NotFound();
             }
 
-            return Ok(mail);
+            return Ok(mails);
         }
     }
 }

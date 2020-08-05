@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using PDWebCore.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace GiftListEditor
@@ -7,6 +8,7 @@ namespace GiftListEditor
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new LogExceptionFilterAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }

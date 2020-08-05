@@ -1,7 +1,9 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using GiftListEditor.BLL.Models;
 using GiftListEditor.DAL;
+using GiftListEditor.DAL.Repositories;
 using PDCore.Factories.Fac;
 using PDCore.Factories.IFac;
 using PDCore.Interfaces;
@@ -28,21 +30,23 @@ namespace GiftListEditor
 
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
 
-            builder.RegisterType(typeof(SqlRepositoryEntityFrameworkAsync<>))
-                   .As(typeof(ISqlRepositoryEntityFrameworkDisconnected<>))
-                   .InstancePerRequest();
-
             builder.RegisterType<WebmailContext>()
-                   .As<IEntityFrameworkDbContext>();
-
-            builder.RegisterType<WebmailContext>()
+                   .As<IEntityFrameworkDbContext>()
                    .As<IMainDbContext>();
-
-            builder.RegisterType<TraceLogger>()
-                   .As<ILogger>();
 
             builder.RegisterType<LogMessageFactory>()
                    .As<ILogMessageFactory>();
+
+            builder.RegisterType<FileLogger>()
+                   .As<ILogger>();
+
+            builder.RegisterGeneric(typeof(SqlRepositoryEntityFrameworkDisconnected<>))
+                   .As(typeof(ISqlRepositoryEntityFrameworkDisconnected<>))
+                   .InstancePerRequest();
+
+            builder.RegisterType<MailRepository>()
+                   .As<IMailRepository>()
+                   .InstancePerRequest();
 
             var container = builder.Build();
 
