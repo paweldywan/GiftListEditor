@@ -13,45 +13,45 @@ namespace GiftListEditor.BLL.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "Id")]
+        [Display(Name = "Id", ResourceType = typeof(Resources.Models.Mail))]
         [DataMember(Name = "id")]
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Folder")]
+        [Display(Name = "Folder", ResourceType = typeof(Resources.Models.Mail))]
         [DataMember(Name = "folder")]
         public Folder Folder { get; set; }
 
         [Required]
-        [Display(Name = "From")]
+        [Display(Name = "From", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.EmailAddress)]
-        [StringLength(150, MinimumLength = 5, ErrorMessage = "{0} must be greater than {2} characters and less than {1} characters,")]
+        [StringLength(150, MinimumLength = 5, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "from")]
         public string From { get; set; }
 
         [Required]
-        [Display(Name = "To")]
+        [Display(Name = "To", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.EmailAddress)]
-        [StringLength(150, MinimumLength = 5, ErrorMessage = "{0} must be greater than {2} characters and less than {1} characters,")]
+        [StringLength(150, MinimumLength = 5, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "to")]
         public string To { get; set; }
 
         [Required]
-        [Display(Name = "Subject")]
+        [Display(Name = "Subject", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Text)]
-        [StringLength(150, MinimumLength = 4, ErrorMessage = "{0} must be greater than {2} characters and less than {1} characters,")]
+        [StringLength(150, MinimumLength = 4, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "subject")]
         public string Subject { get; set; }
 
         [Required]
-        [Display(Name = "Date")]
+        [Display(Name = "Date", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [DataMember(Name = "date")]
         public DateTimeOffset Date { get; set; }
 
         [Required]
-        [Display(Name = "MessageContent")]
+        [Display(Name = "MessageContent", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Html)]
         [MaxLength(2500)]
         [DataMember(Name = "messageContent")]

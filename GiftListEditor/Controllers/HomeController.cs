@@ -5,6 +5,7 @@ using PDWebCore.Attributes;
 using System.Web.Mvc.Html;
 using System.Web;
 using System.Security.Policy;
+using PDWebCore.Helpers.MultiLanguage;
 
 namespace GiftListEditor.Controllers
 {
@@ -12,7 +13,8 @@ namespace GiftListEditor.Controllers
     {
         public ActionResult Index()
         {
-            var initialState = new[] {
+            var initialState = new[] 
+            {
                 new GiftModel { Title = "Tall Hat", Price = 49.95 },
                 new GiftModel { Title = "Long Cloak", Price = 78.25 }
             };
@@ -41,6 +43,13 @@ namespace GiftListEditor.Controllers
         public ActionResult SPA()
         {
             return View();
+        }
+
+        public ActionResult ChangeLanguage(string lang)
+        {
+            LanguageHelper.SetLanguage(lang);
+
+            return Redirect(Request.UrlReferrer.ToString());
         }
     }
 }

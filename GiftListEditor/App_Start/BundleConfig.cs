@@ -30,7 +30,8 @@ namespace GiftListEditor
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js",
                         "~/Scripts/sammy-{version}.js",
-                        "~/Scripts/PDWebCore/Tools.js"));
+                        "~/Scripts/PDWebCore/Tools.js",
+                        "~/Scripts/PDWebCore/Objects.js"));
         }
     }
 }

@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<GiftListEditor.Models.GiftModel>
 
 @{
-    ViewBag.Title = "Gift list editor";
+    ViewBag.Title = Resources.Global.Index_Menu;
 }
 
-<p>You have asked for <span data-bind="text: gifts().length"> </span> gift(s)</p>
+    <p>@Resources.Home.Index.GiftsStatus <span data-bind="text: gifts().length"> </span> @Resources.Home.Index.Gifts</p>
 
 <form class="giftListEditor">
     <table class="table">
         <tbody data-bind="template: { name: 'giftRowTemplate', foreach: gifts }"></tbody>
     </table>
 
-    <button data-bind="click: addGift">Add Gift</button>
+    <button data-bind="click: addGift">@Resources.Home.Index.AddGift</button>
 
-    <button data-bind="enable: gifts().length > 0" type="submit">Submit</button>
+    <button data-bind="enable: gifts().length > 0" type="submit">@Resources.Home.Index.Submit</button>
 </form>
 
 @section scripts{
@@ -21,9 +21,9 @@
 
     <script type="text/html" id="giftRowTemplate">
         <tr>
-            <td>Gift name: <input class="required" data-bind="value: Title, uniqueName: true" /></td>
-            <td>Price: $ <input class="required number" data-bind="value: Price, uniqueName: true" /></td>
-            <td><a href="#" data-bind="click: function() { viewModel.removeGift($data) }">Delete</a></td>
+            <td>@Resources.Home.Index.GiftName: <input class="required" data-bind="value: Title, uniqueName: true" /></td>
+            <td>@Resources.Home.Index.Price: $ <input class="required number" data-bind="value: Price, uniqueName: true" /></td>
+            <td><a href="#" data-bind="click: function() { viewModel.removeGift($data) }">@Resources.Home.Index.Delete</a></td>
         </tr>
     </script>
 

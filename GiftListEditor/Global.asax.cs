@@ -2,6 +2,7 @@
 using PDCore.Repositories.Repo;
 using PDCoreNew.Services.Serv;
 using PDWebCore.Helpers.ExceptionHandling;
+using PDWebCore.Helpers.MultiLanguage;
 using PDWebCore.Loggers;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,11 @@ namespace GiftListEditor
         protected void Application_Error(object sender, EventArgs e)
         {
             HttpApplicationErrorHandler.HandleLastException(Server, Request, Response);
+        }
+
+        protected void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            LanguageHelper.SetLanguage(Request);
         }
     }
 }
