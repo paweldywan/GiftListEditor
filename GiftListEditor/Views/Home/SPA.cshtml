@@ -66,7 +66,7 @@
                     $.get("/api/mail", { folder: folder },
                     function (data) {
                         $.each(data.mails, function () {
-                            this.date = new Date(this.date).toLocaleDateString();
+                            this.date = parseISOString(this.date).toLocaleDateString();
                         });
 
                         self.chosenFolderData(data)
@@ -78,7 +78,7 @@
                     self.chosenFolderData(null);
                     $.get("/api/mail", { mailId: this.params.mailId },
                     function (data) {
-                        data.date = new Date(data.date).toLocaleDateString();
+                        data.date = parseISOString(data.date).toLocaleDateString();
 
                         self.chosenMailData(data)
                     });
