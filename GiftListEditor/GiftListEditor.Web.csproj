@@ -169,11 +169,6 @@
     </Compile>
     <Compile Include="Models\GiftModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Common.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Common.resx</DependentUpon>
-    </Compile>
     <Compile Include="Resources\ErrorMessage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -203,6 +198,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomBindings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Home\DataManipulation\DataManipulation.pl.Designer.cs">
+      <DependentUpon>DataManipulation.pl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Home\DataManipulation\DataManipulation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataManipulation.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Home\Index\Index.pl.Designer.cs">
       <DependentUpon>Index.pl.resx</DependentUpon>
@@ -2405,7 +2410,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resources\Home\DataManipulation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2443,11 +2447,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Common.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Common.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Resources</CustomToolNamespace>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ErrorMessage.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessage.Designer.cs</LastGenOutput>
@@ -2477,6 +2476,16 @@
     <EmbeddedResource Include="Resources\Home\CustomBindings\CustomBindings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomBindings.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources.Home</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home\DataManipulation\DataManipulation.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataManipulation.pl.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources.Home</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home\DataManipulation\DataManipulation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataManipulation.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources.Home</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Home\Index\Index.pl.resx">

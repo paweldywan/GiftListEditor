@@ -4,27 +4,27 @@
 }
 
 <div class="codeRunner">
-    <h3>Tasks</h3>
+    <h3>@Resources.Home.DataManipulation.Tasks</h3>
 
     <form data-bind="submit: addTask">
-        Add task: <input data-bind="value: newTaskText" placeholder="What needs to be done?" />
-        <button type="submit">Add</button>
+        @Resources.Home.DataManipulation.AddTask: <input data-bind="value: newTaskText" placeholder="@Resources.Home.DataManipulation.WhatNeeds" />
+        <button type="submit">@Resources.Common.Add</button>
     </form>
 
     <ul data-bind="foreach: tasks, visible: tasks().length > 0">
         <li>
             <input type="checkbox" data-bind="checked: isDone" />
             <input data-bind="value: title, disable: isDone" />
-            <a href="#" data-bind="click: $parent.removeTask">Delete</a>
+            <a href="#" data-bind="click: $parent.removeTask">@Resources.Common.Delete</a>
         </li>
     </ul>
 
-    You have <b data-bind="text: incompleteTasks().length">&nbsp;</b> incomplete task(s)
-    <span data-bind="visible: incompleteTasks().length == 0"> - it's beer time!</span>
+    @Resources.Home.DataManipulation.TasksStatus <b data-bind="text: incompleteTasks().length">&nbsp;</b> @Resources.Home.DataManipulation.TasksToDo
+    <span data-bind="visible: incompleteTasks().length == 0"> - @Resources.Home.DataManipulation.BeerTime</span>
 
     <form action="/tasks/saveform" method="post">
         <input type="hidden" name="tasks" data-bind="value: ko.toJSON(tasks)" />
-        <button type="submit">Save</button>
+        <button type="submit">@Resources.Common.Save</button>
     </form>
 </div>
 
