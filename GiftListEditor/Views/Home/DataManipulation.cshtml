@@ -22,7 +22,7 @@
     @Resources.Home.DataManipulation.TasksStatus <b data-bind="text: incompleteTasks().length">&nbsp;</b> @Resources.Home.DataManipulation.TasksToDo
     <span data-bind="visible: incompleteTasks().length == 0"> - @Resources.Home.DataManipulation.BeerTime</span>
 
-    <form action="/tasks/saveform" method="post">
+    <form method="post">
         <input type="hidden" name="tasks" data-bind="value: ko.toJSON(tasks)" />
         <button type="submit">@Resources.Common.Save</button>
     </form>

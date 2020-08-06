@@ -6,6 +6,7 @@ using System.Web.Mvc.Html;
 using System.Web;
 using System.Security.Policy;
 using PDWebCore.Helpers.MultiLanguage;
+using GiftListEditor.BLL.Models;
 
 namespace GiftListEditor.Controllers
 {
@@ -53,6 +54,12 @@ namespace GiftListEditor.Controllers
         public ActionResult DataManipulation()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult DataManipulation([FromJson] IEnumerable<Task> tasks)
+        {
+            return View("TasksSaved", tasks);
         }
 
         public ActionResult ChangeLanguage(string lang)

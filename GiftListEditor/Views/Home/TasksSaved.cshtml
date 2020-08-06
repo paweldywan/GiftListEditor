@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GiftListEditor.BLL.Models.Task>
+
+@{
+    ViewBag.Title = Resources.Common.Saved;
+}
+
+<h2>@Resources.Common.ServedReceivedFollowingData</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDone)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>@Resources.Common.ServedReceivedFollowingData:</p>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.DisplayFor(modelItem => item.Title) (@Resources.Common.Done: @(item.IsDone ? Resources.Common.Yes : Resources.Common.No))</li>
+    }
+</ul>
