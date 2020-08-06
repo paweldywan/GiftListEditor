@@ -9,7 +9,7 @@ namespace GiftListEditor.DAL.DTO
     public class TaskDtos
     {
         [DataMember(Name = "tasks")]
-        public IEnumerable<Task> Tasks { get; set; }
+        public List<Task> Tasks { get; set; }
 
         public static implicit operator TaskDtos(List<Task> t) => new TaskDtos { Tasks = t };
     }
