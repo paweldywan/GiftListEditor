@@ -9,10 +9,10 @@ using System.Xml.Serialization;
 
 namespace GiftListEditor.DAL.DTO
 {
-    [XmlRoot("mails")]
+    [DataContract]
     public class MailDtos
     {
-        [XmlElement("mail")]
+        [DataMember(Name = "mails")]
         public List<MailDto> Mails { get; set; }
 
         public static implicit operator MailDtos(List<MailDto> c) => new MailDtos { Mails = c };

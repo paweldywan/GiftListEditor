@@ -10,6 +10,9 @@ namespace GiftListEditor
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
+                 "~/Scripts/jquery-ui-{version}.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -25,7 +28,9 @@ namespace GiftListEditor
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/PDWebCore/coderunner.css",
-                      "~/Content/PDWebCore/webmail.css"));
+                      "~/Content/PDWebCore/webmail.css",
+                      "~/Content/PDWebCore/custombindings.css",
+                      "~/Content/PDWebCore/loadingsaving.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js",

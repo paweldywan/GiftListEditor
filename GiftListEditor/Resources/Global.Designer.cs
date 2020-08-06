@@ -79,6 +79,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating custom bindings.
+        /// </summary>
+        public static string CustomBindings_Menu {
+            get {
+                return ResourceManager.GetString("CustomBindings_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading and saving data.
+        /// </summary>
+        public static string DataManipulation_Menu {
+            get {
+                return ResourceManager.GetString("DataManipulation_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Examples.
+        /// </summary>
+        public static string Examples_Dropdown {
+            get {
+                return ResourceManager.GetString("Examples_Dropdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gift list editor.
         /// </summary>
         public static string Index_Menu {

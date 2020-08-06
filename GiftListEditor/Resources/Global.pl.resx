@@ -123,6 +123,15 @@
   <data name="Collections_Menu" xml:space="preserve">
     <value>Działanie z listami i kolekcjami</value>
   </data>
+  <data name="CustomBindings_Menu" xml:space="preserve">
+    <value>Tworzenie niestandardowych wiązań</value>
+  </data>
+  <data name="DataManipulation_Menu" xml:space="preserve">
+    <value>Ładowanie i zapisywanie danych</value>
+  </data>
+  <data name="Examples_Dropdown" xml:space="preserve">
+    <value>Przykłady</value>
+  </data>
   <data name="Index_Menu" xml:space="preserve">
     <value>Edytor listy prezentów</value>
   </data>

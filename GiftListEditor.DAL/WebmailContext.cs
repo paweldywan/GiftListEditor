@@ -18,5 +18,7 @@ namespace GiftListEditor.DAL
         }
 
         public DbSet<Mail> Mails { get; set; }
+
+        public DbSet<BLL.Models.Task> Tasks { get; set; }
     }
 }

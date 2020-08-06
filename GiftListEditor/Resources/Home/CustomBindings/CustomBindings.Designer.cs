@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Resources {
+namespace Resources.Home {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ErrorMessages {
+    public class CustomBindings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ErrorMessages() {
+        internal CustomBindings() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GiftListEditor.BLL.Resources.ErrorMessages", typeof(ErrorMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GiftListEditor.Resources.Home.CustomBindings.CustomBindings", typeof(CustomBindings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,74 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is required.
+        ///   Looks up a localized string similar to Please distribute.
         /// </summary>
-        public static string Required {
+        public static string Distribute {
             get {
-                return ResourceManager.GetString("Required", resourceCulture);
+                return ResourceManager.GetString("Distribute", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} must be greater than {2} characters and less than {1} characters.
+        ///   Looks up a localized string similar to Finished.
         /// </summary>
-        public static string StringLength_GreaterAndLess {
+        public static string Finished {
             get {
-                return ResourceManager.GetString("StringLength_GreaterAndLess", resourceCulture);
+                return ResourceManager.GetString("Finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You&apos;ve got.
+        /// </summary>
+        public static string Got {
+            get {
+                return ResourceManager.GetString("Got", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importance.
+        /// </summary>
+        public static string Importance {
+            get {
+                return ResourceManager.GetString("Importance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Option.
+        /// </summary>
+        public static string Option {
+            get {
+                return ResourceManager.GetString("Option", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to points between the following options.
+        /// </summary>
+        public static string Points {
+            get {
+                return ResourceManager.GetString("Points", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to points left to use.
+        /// </summary>
+        public static string PointsLeft {
+            get {
+                return ResourceManager.GetString("PointsLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You&apos;ve used too many points! Please remove some..
+        /// </summary>
+        public static string TooManyPoints {
+            get {
+                return ResourceManager.GetString("TooManyPoints", resourceCulture);
             }
         }
     }

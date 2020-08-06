@@ -54,7 +54,7 @@
 
             // Behaviours
             self.goToFolder = function (folder) { location.hash = folder.key };
-            self.goToMail = function (mail) { location.hash = mail.folder + '/' + mail.id };
+            self.goToMail = function (mail) { location.hash = self.folders[mail.folder - 1].key + '/' + mail.id };
             self.exportToCSV = function () {
                 let mails = objectsToRows(self.chosenFolderData().mails);               
                 exportToCsv('mails.csv', mails);

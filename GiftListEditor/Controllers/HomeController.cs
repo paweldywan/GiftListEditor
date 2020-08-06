@@ -45,6 +45,16 @@ namespace GiftListEditor.Controllers
             return View();
         }
 
+        public ActionResult CustomBindings()
+        {
+            return View();
+        }
+
+        public ActionResult DataManipulation()
+        {
+            return View();
+        }
+
         public ActionResult ChangeLanguage(string lang)
         {
             LanguageHelper.SetLanguage(lang);

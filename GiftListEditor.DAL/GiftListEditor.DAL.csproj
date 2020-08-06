@@ -53,10 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\MailDto.cs" />
+    <Compile Include="DTO\TaskDto.cs" />
     <Compile Include="Lazy\Proxies\MailProxy.cs" />
     <Compile Include="Migrations\202008041749275_Initial.cs" />
     <Compile Include="Migrations\202008041749275_Initial.designer.cs">
       <DependentUpon>202008041749275_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008061605533_Task.cs" />
+    <Compile Include="Migrations\202008061605533_Task.designer.cs">
+      <DependentUpon>202008061605533_Task.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\IMailRepository.cs" />
@@ -86,6 +91,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202008041749275_Initial.resx">
       <DependentUpon>202008041749275_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008061605533_Task.resx">
+      <DependentUpon>202008061605533_Task.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

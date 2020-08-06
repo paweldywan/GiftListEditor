@@ -2,12 +2,8 @@
 using GiftListEditor.BLL.Models;
 using PDCoreNew.Extensions;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GiftListEditor.DAL
 {
@@ -15,8 +11,6 @@ namespace GiftListEditor.DAL
     {
         protected override void Seed(WebmailContext context)
         {
-            var set = context.Set<Mail>();
-
             const string dateFormat = "MMM d, yyyy";
 
             var mails = new[]
@@ -50,9 +44,22 @@ namespace GiftListEditor.DAL
                 }
             };
 
-            set.AddRange(mails);
+            context.Set<Mail>().AddRange(mails);
+
+
+            var tasks = new[]
+            {
+                new Task { Title = "Wire the money to Panama", IsDone = true },
+                new Task { Title = "Get hair dye, beard trimmer, dark glasses and \"passport\"", IsDone = false },
+                new Task { Title = "Book taxi to airport", IsDone = false },
+                new Task { Title = "Arrange for someone to look after the cat", IsDone = false },
+            };
+
+            context.Set<Task>().AddRange(tasks);
+
 
             context.SaveChangesWithModificationHistory();
+
 
             base.Seed(context);
         }

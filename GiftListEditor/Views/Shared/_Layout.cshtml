@@ -8,6 +8,12 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div id="overlay"></div>
+    <div id="loading">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -22,8 +28,16 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(Resources.Global.Index_Menu, "Index", "Home")</li>
                     <li>@Html.ActionLink(Resources.Global.Introduction_Menu, "Introduction", "Home")</li>
-                    <li>@Html.ActionLink(Resources.Global.Collections_Menu, "Collections", "Home")</li>
-                    <li>@Html.ActionLink(Resources.Global.SPA_Menu, "SPA", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+                           aria-expanded="false">@Resources.Global.Examples_Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(Resources.Global.Collections_Menu, "Collections", "Home")</li>
+                            <li>@Html.ActionLink(Resources.Global.SPA_Menu, "SPA", "Home")</li>
+                            <li>@Html.ActionLink(Resources.Global.CustomBindings_Menu, "CustomBindings", "Home")</li>
+                            <li>@Html.ActionLink(Resources.Global.DataManipulation_Menu, "DataManipulation", "Home")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,6 +69,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery-ui")
     @Scripts.Render("~/bundles/knockout")
     @RenderSection("scripts", required: false)
 </body>

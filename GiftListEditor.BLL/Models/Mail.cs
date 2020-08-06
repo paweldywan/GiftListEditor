@@ -8,49 +8,45 @@ using System.Runtime.Serialization;
 namespace GiftListEditor.BLL.Models
 {
     [Table("Mail", Schema = "dbo")]
-    [DataContract]
+    [DataContract(Name = "mail")]
     public class Mail : IModificationHistory
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Id", ResourceType = typeof(Resources.Models.Mail))]
-        [DataMember(Name = "id")]
         public int Id { get; set; }
 
-        [Required]
         [Display(Name = "Folder", ResourceType = typeof(Resources.Models.Mail))]
-        [DataMember(Name = "folder")]
         public Folder Folder { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [Display(Name = "From", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.EmailAddress)]
         [StringLength(150, MinimumLength = 5, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "from")]
         public string From { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [Display(Name = "To", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.EmailAddress)]
         [StringLength(150, MinimumLength = 5, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "to")]
         public string To { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [Display(Name = "Subject", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Text)]
         [StringLength(150, MinimumLength = 4, ErrorMessageResourceName = "StringLength_GreaterAndLess", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [DataMember(Name = "subject")]
         public string Subject { get; set; }
 
-        [Required]
         [Display(Name = "Date", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [DataMember(Name = "date")]
         public DateTimeOffset Date { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessages))]
         [Display(Name = "MessageContent", ResourceType = typeof(Resources.Models.Mail))]
         [DataType(DataType.Html)]
         [MaxLength(2500)]

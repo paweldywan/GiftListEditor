@@ -22,14 +22,14 @@ namespace Resources.Models {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Mail {
+    public class Task {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Mail() {
+        internal Task() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources.Models {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GiftListEditor.BLL.Resources.Models.Mail", typeof(Mail).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GiftListEditor.BLL.Resources.Models.Task.Task", typeof(Task).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,33 +61,6 @@ namespace Resources.Models {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date.
-        /// </summary>
-        public static string Date {
-            get {
-                return ResourceManager.GetString("Date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Folder.
-        /// </summary>
-        public static string Folder {
-            get {
-                return ResourceManager.GetString("Folder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to From.
-        /// </summary>
-        public static string From {
-            get {
-                return ResourceManager.GetString("From", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string Id {
@@ -97,29 +70,20 @@ namespace Resources.Models {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MessageContent.
+        ///   Looks up a localized string similar to Is done.
         /// </summary>
-        public static string MessageContent {
+        public static string IsDone {
             get {
-                return ResourceManager.GetString("MessageContent", resourceCulture);
+                return ResourceManager.GetString("IsDone", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Subject.
+        ///   Looks up a localized string similar to Title.
         /// </summary>
-        public static string Subject {
+        public static string Title {
             get {
-                return ResourceManager.GetString("Subject", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to To.
-        /// </summary>
-        public static string To {
-            get {
-                return ResourceManager.GetString("To", resourceCulture);
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

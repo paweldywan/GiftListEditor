@@ -29,6 +29,7 @@ bld/
 ckeditor/
 **/Content/PDWebCore/
 **/Scripts/PDWebCore/
+**/Images/PDWebCore/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
