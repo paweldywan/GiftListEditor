@@ -34,11 +34,15 @@
     <p class="message" data-bind="html: messageContent" />
 </div>
 
+<br />
+
+<button id="generateCSV" class="btn btn-default" data-bind="click: exportToCSV, enable: mailsExist">@Resources.Home.SPA.GenerateCSV</button>
+
 @section Scripts{
     <script>
         function WebmailViewModel() {
             // Data
-            var self = this;
+            let self = this;
             self.folders = [new KeyValuePair('Inbox', '@Resources.Home.SPA.Inbox'),
                             new KeyValuePair('Archive', '@Resources.Home.SPA.Archive'),
                             new KeyValuePair('Sent', '@Resources.Home.SPA.Sent'),
@@ -51,8 +55,14 @@
             // Behaviours
             self.goToFolder = function (folder) { location.hash = folder.key };
             self.goToMail = function (mail) { location.hash = mail.folder + '/' + mail.id };
+            self.exportToCSV = function () {
+                let mails = objectsToRows(self.chosenFolderData().mails);               
+                exportToCsv('mails.csv', mails);
+            }
 
             let firstFolder = self.folders[0].key;
+
+            self.mailsExist = ko.pureComputed(() => self.chosenFolderData()?.mails.length > 0 ?? false);
 
             GoToFolder(firstFolder);
 
@@ -63,29 +73,27 @@
 
                     if (!self.folders.some(f => f.key == folder)) {
                         GoToFolder(firstFolder);
-
                         return;
                     }
 
                     self.chosenFolderId(folder);
                     self.chosenMailData(null);
+
                     $.get("/api/mail", { folder: folder },
                     function (data) {
-                        $.each(data.mails, function () {
-                            this.date = parseISOString(this.date).toLocaleDateString();
-                        });
-
+                        fromISODateToLocaleStringConverter(data.mails)
                         self.chosenFolderData(data)
                     });
                 });
 
                 this.get('#:folder/:mailId', function () {
+
                     self.chosenFolderId(this.params.folder);
                     self.chosenFolderData(null);
+
                     $.get("/api/mail", { mailId: this.params.mailId },
                     function (data) {
-                        data.date = parseISOString(data.date).toLocaleDateString();
-
+                        fromISODateToLocaleStringConverter(data)
                         self.chosenMailData(data)
                     });
                 });

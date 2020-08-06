@@ -120,6 +120,9 @@
   <data name="Meal" xml:space="preserve">
     <value>Jedzenie</value>
   </data>
+  <data name="None" xml:space="preserve">
+    <value>Brak</value>
+  </data>
   <data name="PassengerName" xml:space="preserve">
     <value>Pasażer</value>
   </data>

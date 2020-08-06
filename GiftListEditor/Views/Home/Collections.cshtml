@@ -40,7 +40,7 @@
 
             self.formattedPrice = ko.computed(function () {
                 var price = self.meal().price;
-                return price ? "$" + price.toFixed(2) : "None";
+                return price ? "$" + price.toFixed(2) : "@Resources.Home.Collections.None";
             });
         }
 

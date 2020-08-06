@@ -38,6 +38,15 @@ namespace GiftListEditor.DAL
                     Date = DateTimeOffset.ParseExact("May 2, 2011", dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal),
                     MessageContent = "Hi Laith,<br>At et eros.<br><br>Eu no dolore et ea vero dolore luptatum tempor sit ipsum labore dolor elitr. Eirmod clita facilisis et velit justo eos eos. Dolor gubergren vero rebum elitr sit sit ipsum ut no rebum et.<br><br>Exerci diam ut vel ut. Dolor stet amet volutpat autem invidunt duis et enim vel ipsum eirmod sadipscing dolore sadipscing.<br><br>Cheers - Ori Hupe",
                     Folder = Folder.Archive
+                },
+                new Mail
+                {
+                    Subject = "FW: Associate advice",
+                    From = "Addison Begoat <upton.oprdrusson@pear-income.xyz>",
+                    To = "steve@example.com",
+                    Date = DateTimeOffset.ParseExact("May 7, 2011", dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal),
+                    MessageContent = "Yo...<br>Augue enim zzril vulputate amet suscipit suscipit ut. Dolor velit eos sit eleifend duo no soluta. Eos sit magna.<br><br>Sadipscing molestie voluptua clita kasd sadipscing dolor accusam quis accusam consetetur invidunt erat dolore. Dolor consetetur sed ea lorem et et suscipit magna ipsum magna sit eu sed sea vel.<br><br>Ut nonumy no stet congue nonumy amet luptatum et dolor enim eirmod erat kasd accusam diam eirmod. Dolor et vel diam qui sadipscing et erat ut erat nonummy dolor ea accusam sit eirmod illum eos accusam. Invidunt vulputate diam dolore est voluptua dolores et dolor iriure tincidunt consetetur elitr vero kasd clita sed.<br><br>Thanks,<br>Ali",
+                    Folder = Folder.Inbox
                 }
             };
 

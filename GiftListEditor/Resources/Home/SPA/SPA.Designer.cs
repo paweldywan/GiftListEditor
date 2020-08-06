@@ -70,6 +70,15 @@ namespace Resources.Home {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generate CSV.
+        /// </summary>
+        public static string GenerateCSV {
+            get {
+                return ResourceManager.GetString("GenerateCSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inbox.
         /// </summary>
         public static string Inbox {

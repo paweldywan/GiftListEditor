@@ -120,6 +120,9 @@
   <data name="Archive" xml:space="preserve">
     <value>Archiwalne</value>
   </data>
+  <data name="GenerateCSV" xml:space="preserve">
+    <value>Generuj CSV</value>
+  </data>
   <data name="Inbox" xml:space="preserve">
     <value>Odebrane</value>
   </data>

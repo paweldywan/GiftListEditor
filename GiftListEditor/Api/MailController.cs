@@ -41,11 +41,6 @@ namespace GiftListEditor.Api
         {
             MailDtos mails = await mailRepository.GetDtoAsync(m => m.Folder == folder);
 
-            if (mails == null)
-            {
-                return NotFound();
-            }
-
             return Ok(mails);
         }
     }
