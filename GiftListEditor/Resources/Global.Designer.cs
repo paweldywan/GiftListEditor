@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Demo.
+        /// </summary>
+        public static string Demo_Menu {
+            get {
+                return ResourceManager.GetString("Demo_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Examples.
         /// </summary>
         public static string Examples_Dropdown {

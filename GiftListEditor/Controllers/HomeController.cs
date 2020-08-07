@@ -1,12 +1,10 @@
-﻿using GiftListEditor.Models;
+﻿using GiftListEditor.BLL.Models;
+using GiftListEditor.Models;
+using PDWebCore.Attributes;
+using PDWebCore.Helpers.MultiLanguage;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using PDWebCore.Attributes;
-using System.Web.Mvc.Html;
-using System.Web;
-using System.Security.Policy;
-using PDWebCore.Helpers.MultiLanguage;
-using GiftListEditor.BLL.Models;
+using System.Linq;
 
 namespace GiftListEditor.Controllers
 {
@@ -29,7 +27,8 @@ namespace GiftListEditor.Controllers
             // Can process the data any way we want here,
             // e.g., further server-side validation, save to database, etc
             return View("Saved", gifts);
-        }   
+        }  
+        
 
         public ActionResult Introduction()
         {
@@ -51,6 +50,7 @@ namespace GiftListEditor.Controllers
             return View();
         }
 
+
         public ActionResult DataManipulation()
         {
             return View();
@@ -61,6 +61,23 @@ namespace GiftListEditor.Controllers
         {
             return View("TasksSaved", tasks);
         }
+
+
+        public ActionResult Demo()
+        {
+            return View();
+        }
+
+        public JsonResult Save(Person person)
+        {
+            // Just to show we have actually got the data as .NET objects
+            var message = string.Format("Saved {0} {1}", person.FirstName, person.LastName);
+            message += string.Format(" with {0} friends", person.Friends.Count);
+            message += string.Format(" ({0} on Twitter)", person.Friends.Count(f => f.IsOnTwitter));
+
+            return Json(new { message });
+        }
+
 
         public ActionResult ChangeLanguage(string lang)
         {

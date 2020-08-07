@@ -129,6 +129,9 @@
   <data name="DataManipulation_Menu" xml:space="preserve">
     <value>Ładowanie i zapisywanie danych</value>
   </data>
+  <data name="Demo_Menu" xml:space="preserve">
+    <value>Demonstracja</value>
+  </data>
   <data name="Examples_Dropdown" xml:space="preserve">
     <value>Przykłady</value>
   </data>

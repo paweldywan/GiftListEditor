@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="APP_NAME" xml:space="preserve">
-    <value>Knockout.js examples</value>
-  </data>
-  <data name="Collections_Menu" xml:space="preserve">
-    <value>Working with Lists and Collections</value>
-  </data>
-  <data name="CustomBindings_Menu" xml:space="preserve">
-    <value>Creating custom bindings</value>
-  </data>
-  <data name="DataManipulation_Menu" xml:space="preserve">
-    <value>Loading and saving data</value>
-  </data>
-  <data name="Demo_Menu" xml:space="preserve">
-    <value>Demo</value>
-  </data>
-  <data name="Examples_Dropdown" xml:space="preserve">
-    <value>Examples</value>
-  </data>
-  <data name="Index_Menu" xml:space="preserve">
-    <value>Gift list editor</value>
-  </data>
-  <data name="Introduction_Menu" xml:space="preserve">
-    <value>Introduction</value>
-  </data>
-  <data name="SPA_Menu" xml:space="preserve">
-    <value>Single page applications</value>
-  </data>
 </root>
