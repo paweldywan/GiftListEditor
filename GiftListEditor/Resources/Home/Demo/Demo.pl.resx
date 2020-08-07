@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddFriend" xml:space="preserve">
-    <value>Add friend</value>
+    <value>Dodaj znajomego</value>
   </data>
   <data name="IsOnTwitter" xml:space="preserve">
-    <value>Is on Twitter</value>
+    <value>Jest na Twitterze</value>
   </data>
   <data name="TwitterName" xml:space="preserve">
-    <value>Twitter name</value>
+    <value>Nazwa na Twitterze</value>
   </data>
 </root>

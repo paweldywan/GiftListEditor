@@ -6,18 +6,19 @@ using System.Web;
 
 namespace GiftListEditor.Models
 {
-    public class Person
+    public class Friend
     {
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessage))]
         [Display(Name = "FirstName", ResourceType = typeof(Resources.Common))]
         [DataType(DataType.Text)]
-        public string FirstName { get; set; }
+        public string Name { get; set; }
+
+        [Display(Name = "IsOnTwitter", ResourceType = typeof(Resources.Home.Demo))]
+        public bool IsOnTwitter { get; set; }
 
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessage))]
-        [Display(Name = "LastName", ResourceType = typeof(Resources.Common))]
+        [Display(Name = "TwitterName", ResourceType = typeof(Resources.Home.Demo))]
         [DataType(DataType.Text)]
-        public string LastName { get; set; }
-
-        public ICollection<Friend> Friends { get; set; }
+        public string TwitterName { get; set; }
     }
 }

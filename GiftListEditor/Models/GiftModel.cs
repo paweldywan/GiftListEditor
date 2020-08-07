@@ -10,6 +10,7 @@ namespace GiftListEditor.Models
     {
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessage))]
         [Display(Name = "Title", ResourceType = typeof(Resources.Models.GiftModel))]
+        [DataType(DataType.Text)]
         public string Title { get; set; }
 
         [Required(ErrorMessageResourceName = "Required", ErrorMessageResourceType = typeof(Resources.ErrorMessage))]

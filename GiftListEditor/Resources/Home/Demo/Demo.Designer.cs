@@ -59,5 +59,32 @@ namespace Resources.Home {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add friend.
+        /// </summary>
+        public static string AddFriend {
+            get {
+                return ResourceManager.GetString("AddFriend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is on Twitter.
+        /// </summary>
+        public static string IsOnTwitter {
+            get {
+                return ResourceManager.GetString("IsOnTwitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Twitter name.
+        /// </summary>
+        public static string TwitterName {
+            get {
+                return ResourceManager.GetString("TwitterName", resourceCulture);
+            }
+        }
     }
 }

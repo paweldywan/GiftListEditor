@@ -3,26 +3,26 @@
     ViewBag.Title = Resources.Global.Demo_Menu;
 }
 
-<h3>Details</h3>
+<h3>@Resources.Common.Details</h3>
 
-<p>Fist name: <input data-bind="value: firstName" /></p>
-<p>Last name: <input data-bind="value: lastName" /></p>
+<p>@Resources.Common.FirstName: <input data-bind="value: firstName" /></p>
+<p>@Resources.Common.LastName: <input data-bind="value: lastName" /></p>
 
-<p>Full name: <span data-bind="text: fullName"></span></p>
+<p>@Resources.Common.FullName: <span data-bind="text: fullName"></span></p>
 
-<h2>Friends (<span data-bind="text: friends().length"></span>)</h2>
+<h2>@Resources.Common.Friends (<span data-bind="text: friends().length"></span>)</h2>
 <ul data-bind="template: { name: 'friendsTemplate', foreach: friends }"></ul>
 
-<button data-bind="click: addFriend, enable: friends().length < 5">Add friend</button>
-<button data-bind="click: save">Save</button>
+<button data-bind="click: addFriend, enable: friends().length < 5">@Resources.Home.Demo.AddFriend</button>
+<button data-bind="click: save">@Resources.Common.Save</button>
 
 @section Scripts{
     <script id="friendsTemplate" type="text/html">
         <li>
             <input data-bind="value: name" />
-            <button data-bind="click: remove">Remove</button>
+            <button data-bind="click: remove">@Resources.Common.Delete</button>
 
-            <label><input type="checkbox" data-bind="checked: isOnTwitter" />Is on Twitter</label>
+            <label><input type="checkbox" data-bind="checked: isOnTwitter" />@Resources.Home.Demo.IsOnTwitter</label>
             <input data-bind="value: twitterName, visible: isOnTwitter" />
         </li>
     </script>

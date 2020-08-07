@@ -167,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Friend.cs" />
     <Compile Include="Models\GiftModel.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +210,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataManipulation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Home\Demo\Demo.pl.Designer.cs">
+      <DependentUpon>Demo.pl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Resources\Home\Demo\Demo.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2494,6 +2500,11 @@
     <EmbeddedResource Include="Resources\Home\DataManipulation\DataManipulation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DataManipulation.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources.Home</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home\Demo\Demo.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Demo.pl.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources.Home</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Home\Demo\Demo.resx">
