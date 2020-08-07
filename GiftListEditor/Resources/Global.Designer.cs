@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Courses.
+        /// </summary>
+        public static string Courses_Dropdown {
+            get {
+                return ResourceManager.GetString("Courses_Dropdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating custom bindings.
         /// </summary>
         public static string CustomBindings_Menu {
@@ -133,11 +142,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting started with Knockout.
+        /// </summary>
+        public static string KnockoutGettingStarted_Menu {
+            get {
+                return ResourceManager.GetString("KnockoutGettingStarted_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Building HTML5 and JavaScript Apps with MVVM and Knockout.
+        /// </summary>
+        public static string KnockoutMVVM_Dropdown {
+            get {
+                return ResourceManager.GetString("KnockoutMVVM_Dropdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Single page applications.
         /// </summary>
         public static string SPA_Menu {
             get {
                 return ResourceManager.GetString("SPA_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No binding vs using Knockout.
+        /// </summary>
+        public static string WithoutDataBinding_Menu {
+            get {
+                return ResourceManager.GetString("WithoutDataBinding_Menu", resourceCulture);
             }
         }
     }

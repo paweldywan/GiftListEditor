@@ -29,7 +29,7 @@
                     <li>@Html.ActionLink(Resources.Global.Index_Menu, "Index", "Home")</li>
                     <li>@Html.ActionLink(Resources.Global.Introduction_Menu, "Introduction", "Home")</li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">@Resources.Global.Examples_Dropdown <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink(Resources.Global.Collections_Menu, "Collections", "Home")</li>
@@ -39,6 +39,20 @@
                         </ul>
                     </li>
                     <li>@Html.ActionLink(Resources.Global.Demo_Menu, "Demo", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">@Resources.Global.Courses_Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">@Resources.Global.KnockoutMVVM_Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink(Resources.Global.KnockoutGettingStarted_Menu, "Index", "Courses")</li>
+                                    <li>@Html.ActionLink(Resources.Global.WithoutDataBinding_Menu, "WithoutDataBinding", "Courses")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

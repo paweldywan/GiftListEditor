@@ -123,6 +123,9 @@
   <data name="Collections_Menu" xml:space="preserve">
     <value>Działanie z listami i kolekcjami</value>
   </data>
+  <data name="Courses_Dropdown" xml:space="preserve">
+    <value>Kursy</value>
+  </data>
   <data name="CustomBindings_Menu" xml:space="preserve">
     <value>Tworzenie niestandardowych wiązań</value>
   </data>
@@ -141,7 +144,16 @@
   <data name="Introduction_Menu" xml:space="preserve">
     <value>Wprowadzenie</value>
   </data>
+  <data name="KnockoutGettingStarted_Menu" xml:space="preserve">
+    <value>Rozpoczęcie z Knockout</value>
+  </data>
+  <data name="KnockoutMVVM_Dropdown" xml:space="preserve">
+    <value>Tworzenie aplikacji z HTML5 i JavaScript w MVVM z Knockout</value>
+  </data>
   <data name="SPA_Menu" xml:space="preserve">
     <value>Aplikacja na jednej stronie</value>
+  </data>
+  <data name="WithoutDataBinding_Menu" xml:space="preserve">
+    <value>Brak mechanizmu wiązania kontra używanie Knockout</value>
   </data>
 </root>
