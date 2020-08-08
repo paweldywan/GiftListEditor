@@ -2425,6 +2425,7 @@
     <Content Include="Views\Home\Demo.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\WithoutDataBinding.cshtml" />
+    <Content Include="Views\Courses\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

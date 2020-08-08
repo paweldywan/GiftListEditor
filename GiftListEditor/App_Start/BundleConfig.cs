@@ -30,7 +30,9 @@ namespace GiftListEditor
                       "~/Content/PDWebCore/coderunner.css",
                       "~/Content/PDWebCore/webmail.css",
                       "~/Content/PDWebCore/custombindings.css",
-                      "~/Content/PDWebCore/loadingsaving.css"));
+                      "~/Content/PDWebCore/loadingsaving.css",
+                      "~/Content/PDWebCore/fonts.css",
+                      "~/Content/PDWebCore/styles.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js",
