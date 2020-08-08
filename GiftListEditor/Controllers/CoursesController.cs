@@ -17,5 +17,15 @@ namespace GiftListEditor.Controllers
         {
             return View();
         }
+
+        public ActionResult Observable()
+        {
+            return View();
+        }
+
+        public ActionResult Computed()
+        {
+            return View();
+        }
     }
 }

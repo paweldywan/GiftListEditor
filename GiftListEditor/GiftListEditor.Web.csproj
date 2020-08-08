@@ -2283,6 +2283,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\314ce.png" />
+    <Content Include="Images\Dunlop Trigger Classical Guitar Capo.png" />
+    <Content Include="Images\El Dorado Vintage Hand-Tooled Leather Guitar Strap.png" />
+    <Content Include="Images\Glider GL-1 Guitar Capo.png" />
+    <Content Include="Images\Jodi Head 3 Inch Denny Wide Art Deco Guitar Strap - Brown and Tan Sequin Sparkle.png" />
+    <Content Include="Images\Levy%27s Leather Guitar Strap with Dog Tags.png" />
+    <Content Include="Images\LM Products Iron Cross Stud 2 Inch Guitar Strap.png" />
+    <Content Include="Images\Moody 2 half Inch Luxury Black Leather Guitar Strap with Tobacco Leather Back.png" />
+    <Content Include="Images\Paige 6-String Guitar Capo.png" />
     <Content Include="Images\PDWebCore\accent.png" />
     <Content Include="Images\PDWebCore\ajax-loader.gif" />
     <Content Include="Images\PDWebCore\bullet.png" />
@@ -2298,6 +2307,20 @@
     <Content Include="Images\PDWebCore\orderedList8.png" />
     <Content Include="Images\PDWebCore\orderedList9.png" />
     <Content Include="Images\PDWebCore\stars.png" />
+    <Content Include="Images\Pick01.png" />
+    <Content Include="Images\Pick02.png" />
+    <Content Include="Images\Pick03.png" />
+    <Content Include="Images\Pick04.png" />
+    <Content Include="Images\Pick05.png" />
+    <Content Include="Images\Pick06.png" />
+    <Content Include="Images\Pick07.png" />
+    <Content Include="Images\Pick08.png" />
+    <Content Include="Images\Pick09.png" />
+    <Content Include="Images\Planet Waves NS Classical Guitar Capo.png" />
+    <Content Include="Images\Taylor 314-CE Left-Handed Grand Auditorium Acoustic-Electric Guitar.png" />
+    <Content Include="Images\Taylor Baby Taylor Left-Handed Acoustic Guitar.png" />
+    <Content Include="Images\Taylor Koa Series K66ce Grand Symphony 12-String Cutaway Acoustic Electric Guitar.png" />
+    <Content Include="Images\Taylor T5 Standard Acoustic-Electric Guitar with Spruce Top.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\PDWebCore\bootstrap-select.css.map" />
@@ -2371,6 +2394,7 @@
     <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="ckeditor\skins\moono-lisa\readme.md" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\data.js" />
     <Content Include="Scripts\home.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2426,6 +2450,8 @@
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\WithoutDataBinding.cshtml" />
     <Content Include="Views\Courses\_Header.cshtml" />
+    <Content Include="Views\Courses\Observable.cshtml" />
+    <Content Include="Views\Courses\Computed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

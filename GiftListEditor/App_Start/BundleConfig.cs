@@ -38,7 +38,8 @@ namespace GiftListEditor
                         "~/Scripts/knockout-{version}.js",
                         "~/Scripts/sammy-{version}.js",
                         "~/Scripts/PDWebCore/Tools.js",
-                        "~/Scripts/PDWebCore/Objects.js"));
+                        "~/Scripts/PDWebCore/Objects.js",
+                        "~/Scripts/data.js"));
         }
     }
 }

@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Computed Observables.
+        /// </summary>
+        public static string Computed_Menu {
+            get {
+                return ResourceManager.GetString("Computed_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Courses.
         /// </summary>
         public static string Courses_Dropdown {
@@ -156,6 +165,15 @@ namespace Resources {
         public static string KnockoutMVVM_Dropdown {
             get {
                 return ResourceManager.GetString("KnockoutMVVM_Dropdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Observables.
+        /// </summary>
+        public static string Observable_Menu {
+            get {
+                return ResourceManager.GetString("Observable_Menu", resourceCulture);
             }
         }
         

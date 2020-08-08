@@ -123,6 +123,9 @@
   <data name="Collections_Menu" xml:space="preserve">
     <value>Działanie z listami i kolekcjami</value>
   </data>
+  <data name="Computed_Menu" xml:space="preserve">
+    <value>Obliczalne obiekty obserwowalne</value>
+  </data>
   <data name="Courses_Dropdown" xml:space="preserve">
     <value>Kursy</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="KnockoutMVVM_Dropdown" xml:space="preserve">
     <value>Tworzenie aplikacji z HTML5 i JavaScript w MVVM z Knockout</value>
+  </data>
+  <data name="Observable_Menu" xml:space="preserve">
+    <value>Obiekty obserwowalne</value>
   </data>
   <data name="SPA_Menu" xml:space="preserve">
     <value>Aplikacja na jednej stronie</value>

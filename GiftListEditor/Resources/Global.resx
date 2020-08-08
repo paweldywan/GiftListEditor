@@ -123,6 +123,9 @@
   <data name="Collections_Menu" xml:space="preserve">
     <value>Working with Lists and Collections</value>
   </data>
+  <data name="Computed_Menu" xml:space="preserve">
+    <value>Computed Observables</value>
+  </data>
   <data name="Courses_Dropdown" xml:space="preserve">
     <value>Courses</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="KnockoutMVVM_Dropdown" xml:space="preserve">
     <value>Building HTML5 and JavaScript Apps with MVVM and Knockout</value>
+  </data>
+  <data name="Observable_Menu" xml:space="preserve">
+    <value>Observables</value>
   </data>
   <data name="SPA_Menu" xml:space="preserve">
     <value>Single page applications</value>
