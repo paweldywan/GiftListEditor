@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/aspnettestserver/databases/Webmail",
+      "type": "mssql.azure",
+      "connectionId": "WebmailContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
