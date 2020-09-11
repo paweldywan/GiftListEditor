@@ -13,8 +13,8 @@ namespace GiftListEditor.DAL
     {
         public WebmailContext() : base("WebmailContext")
         {
-            //Database.SetInitializer(new WebmailDbInitializer());
-            Database.SetInitializer(new NullDatabaseInitializer<WebmailContext>());
+            Database.SetInitializer(new WebmailDbInitializer());
+            //Database.SetInitializer(new NullDatabaseInitializer<WebmailContext>());
         }
 
         public DbSet<Mail> Mails { get; set; }

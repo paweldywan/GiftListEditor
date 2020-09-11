@@ -7,7 +7,7 @@ using System.Globalization;
 
 namespace GiftListEditor.DAL
 {
-    public class WebmailDbInitializer : DropCreateDatabaseIfModelChanges<WebmailContext>
+    public class WebmailDbInitializer : CreateDatabaseIfNotExists<WebmailContext>
     {
         protected override void Seed(WebmailContext context)
         {
